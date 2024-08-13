@@ -1,4 +1,5 @@
 import { Ball } from "./Ball";
+import { BounceBall } from "./src/BounceBall";
 
 class App {
     constructor() {
@@ -11,6 +12,8 @@ class App {
         this.resize();
 
         this.ball = new Ball(this.stageWidth, this.stageHeight, 60, 5)
+
+        this.bounceBall = new BounceBall(this.stageWidth, this.stageHeight, 30, 5)
 
         window.requestAnimationFrame(this.animate.bind(this));
     }
@@ -29,6 +32,7 @@ class App {
 
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
         this.ball.draw(this.ctx, this.stageWidth, this.stageHeight);
+        this.bounceBall.draw(this.ctx, this.stageWidth, this.stageHeight);
     }
 }
 
