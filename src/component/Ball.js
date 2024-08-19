@@ -27,6 +27,12 @@ export class Ball {
         const minY = this.radius;
         const maxY = stageHeight - this.radius;
 
+        console.log('this.x, this.y', this.x, this.y);
+        console.log('minX, maxX', minX, maxX);
+        console.log('minY, maxY', minY, maxY);
+        
+        
+
         if(this.x <= minX || this.x >= maxX) {
             this.vx *= -1;
             this.x += this.vx;
